@@ -1,13 +1,11 @@
-import { request } from 'node:http';
+import http from "node:http";
 
 export default {
-	async fetch(request, env, ctx): Promise<Response> {
-		const code = await new Promise<string>((resolve, reject) => {
-			request('http://example.com', { method: 'GET' }, (res: any) => {
-				resolve(res.statusCode);
-			});
-		});
+	async fetch(request: any){
+		timers.setTimeout(() => {
+			console.log("last");
+		}, 10);
 
-		return new Response(`The code is: ${code}`, { status: 200 });
+		return new Response(`The code is foo`, { status: 200 });
 	},
-} satisfies ExportedHandler<Env>;
+}

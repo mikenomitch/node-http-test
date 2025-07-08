@@ -1,8 +1,8 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "http-node-test",
-	"main": "src/index.ts",
-	"compatibility_date": "2025-07-08",
+	"main": "src/index.js",
+	"compatibility_date": "2025-07-07",
 	"compatibility_flags": ["experimental", "nodejs_compat"],
 	"observability": {
 		"enabled": true
